@@ -1,7 +1,11 @@
 {
   "item.dizzyalloys.raw_tin": "Raw Tin",
+  "item.dizzyalloys.tin_ingot": "Tin Ingot",
 
   "block.dizzyalloys.tin_ore": "Tin Ore",
+  "block.dizzyalloys.deepslate_tin_ore": "Deepslate Tin Ore",
 
-  "block.dizzyalloys.tin_block": "Tin Block"
+  "block.dizzyalloys.tin_block": "Tin Block",
+
+  "creativetab.dizzyalloys.dizzy_alloys_tab": "Dizzy Alloys"
 }

@@ -12,6 +12,8 @@ public class ModItems {
     // TIN METAL
     public static final DeferredItem<Item> RAW_TIN = ITEMS.register("raw_tin",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TIN_INGOT = ITEMS.register("tin_ingot",
+            () -> new Item(new Item.Properties()));
 
 
 

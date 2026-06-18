@@ -1,6 +1,7 @@
 package net.dyzygy.dizzyalloys;
 
 import net.dyzygy.dizzyalloys.block.ModBlock;
+import net.dyzygy.dizzyalloys.item.ModCreativeModeTabs;
 import net.dyzygy.dizzyalloys.item.ModItems;
 import net.neoforged.bus.api.Event;
 import org.slf4j.Logger;
@@ -52,6 +53,8 @@ public class DizzyAlloys {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlock.register(modEventBus);
 
@@ -72,8 +75,15 @@ public class DizzyAlloys {
             event.accept(ModItems.RAW_TIN);
         }
 
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.TIN_INGOT);
+        }
+
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlock.TIN_ORE);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlock.DEEPSLATE_TIN_ORE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
